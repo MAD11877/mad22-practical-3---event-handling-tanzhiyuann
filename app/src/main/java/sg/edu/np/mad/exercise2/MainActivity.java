@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         TextView description = findViewById(R.id.description);
         Button follow = findViewById(R.id.follow);
 
+        Button message = findViewById(R.id.message);
+
+
         Intent receivingEnd = getIntent();
         int number = receivingEnd.getIntExtra("number", 1);
 
@@ -39,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        message.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent messageGroup = new Intent(MainActivity.this,MessageGroup.class);
+                startActivity(messageGroup);
+            }
+        });
 
     }
 
