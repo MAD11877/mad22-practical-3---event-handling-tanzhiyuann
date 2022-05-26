@@ -31,6 +31,7 @@ public class MessageGroup extends AppCompatActivity {
             public void onClick(View view) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.fragmentContainer, new Fragment2());
+                ft.commit();
             }
         });
 
